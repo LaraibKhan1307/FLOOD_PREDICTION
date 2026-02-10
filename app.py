@@ -39,12 +39,13 @@ class ProbabilisticMLP(nn.Module):
 
 
 
-df = load_data()
+df = pd.read_csv("train.csv")
 
 target_col = df.columns[-1]
+
 X = df.drop(columns=[target_col])
-X = X.iloc[:,1:]# drop ID/index column
 y = df[target_col]
+X = X.iloc[:, 1:]  
 
 # =====================================================
 # LOAD PRE-TRAINED MODELS (NO TRAINING)
