@@ -56,7 +56,6 @@ def load_models():
         "Lasso": load("models/lasso_model.joblib"),
         "ElasticNet": load("models/elasticnet_model.joblib"),
         "Decision Tree": load("models/dt_model.joblib"),
-        "Random Forest": load("models/rf_model.joblib"),
     }
     scaler = load("models/scaler.joblib")
 
@@ -168,7 +167,7 @@ if page == "Flood Prediction":
         user_input = np.array(user_input).reshape(1, -1)
 
 
-        if model_name in ["Decision Tree", "Random Forest"]:
+        if model_name in ["Decision Tree"]:
             prediction = models[model_name].predict(user_input)[0]
 
         elif model_name == "MLP":
