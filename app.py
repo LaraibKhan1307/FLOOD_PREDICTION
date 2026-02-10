@@ -57,7 +57,6 @@ def load_models():
         "Lasso": load("models/lasso_model.joblib"),
         "ElasticNet": load("models/elasticnet_model.joblib"),
         "Decision Tree": load("models/dt_model.joblib"),
-        "Random Forest": load("models/rf_model.joblib"),
     }
     scaler = load("models/scaler.joblib")
 
